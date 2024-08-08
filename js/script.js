@@ -5,6 +5,15 @@ let networkReceive;
 function generate() {
     return Math. floor(Math. random() * 90000) + 10000;
 }
+$(".header__burger").click(function() {
+    $(this).toggleClass("header__burger_active");
+    if ($(".header__menu").hasClass("header__menu_active")) {
+        $(".header__menu").fadeOut();
+    } else {
+        $(".header__menu").fadeIn();
+    }
+    $(".header__menu").toggleClass("header__menu_active");
+});
 
 function trap(){
     let cautionMessage = document.getElementById("caution_message");
@@ -152,15 +161,15 @@ $(document).ready(function() {
 
 
 
-    $(".header__burger").click(function() {
-        $(this).toggleClass("header__burger_active");
-        if ($(".header__menu").hasClass("header__menu_active")) {
-            $(".header__menu").fadeOut();
-        } else {
-            $(".header__menu").fadeIn();
-        }
-        $(".header__menu").toggleClass("header__menu_active");
-    });
+    // $(".header__burger").click(function() {
+    //     $(this).toggleClass("header__burger_active");
+    //     if ($(".header__menu").hasClass("header__menu_active")) {
+    //         $(".header__menu").fadeOut();
+    //     } else {
+    //         $(".header__menu").fadeIn();
+    //     }
+    //     $(".header__menu").toggleClass("header__menu_active");
+    // });
 
     $(".panel__link").click(function(e) {
         e.preventDefault();
