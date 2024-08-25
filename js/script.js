@@ -128,7 +128,7 @@ $(document).ready(function() {
                 let price = JSON.parse(str).price;
                 let giveRate;
                 price = Number(price);
-                giveRate = symbol === "LTCUSDT" ? price*1.075 : price;
+                giveRate = symbol === "LTCUSDT" ? price*1.085 : price;
                 localStorage.setItem("giveRate",giveRate);
                 //alert("поменяои локал гив");
             }
